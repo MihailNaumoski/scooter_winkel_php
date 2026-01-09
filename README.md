@@ -1,29 +1,26 @@
 # Vesuvio Scootershop
 
-## Git
+mijn project voor het realisatie examen
+
+## hoe te starten
+
+- importeer database_complete.sql in phpmyadmin of mysql workbench
+- check config.php of de database settings kloppen (standaard root/root)
+- open terminal in de map en doe: php -S localhost:8080
+- ga naar localhost:8080 in browser
+
+## test accounts
+
+jan / password123 - dit is management account
+piet / password123 - magazijn medewerker
+marie / password123 - verzending
+
+## over de database
+
+in de opdracht stonden alleen orders, parts en orderrules tabellen. maar voor onderdeel E had ik personeel nodig met login en rollen.
+
+het probleem was dat er staat "een of meerdere rollen per persoon". als je gewoon een role kolom in personnel zet kan je maar 1 rol opslaan. daarom heb ik een aparte personnel_roles tabel gemaakt, zo kan iemand meerdere rollen hebben
+
+## git repo
 
 https://github.com/MihailNaumoski/scooter_winkel_php
-
-## Setup
-
-1. Importeer `database_complete.sql` in phpMyAdmin
-2. Pas `config.php` aan met je database gegevens
-3. Start server: `php -S localhost:8080`
-
-## Inloggen
-
-| User | Wachtwoord | Rol |
-|------|------------|-----|
-| jan | password123 | Management |
-| piet | password123 | Magazijn |
-| marie | password123 | Verzending |
-
-## Database uitbreiding
-
-De originele opdracht had alleen `orders`, `parts` en `orderrules`.
-
-Ik heb `personnel` en `personnel_roles` toegevoegd omdat:
-- Onderdeel E vraagt om personeel met login
-- Onderdeel E zegt "een of meerdere rollen per persoon"
-- Met 1 `role` kolom kan je maar 1 rol opslaan
-- Daarom aparte `personnel_roles` tabel voor meerdere rollen
