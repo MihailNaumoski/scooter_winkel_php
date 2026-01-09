@@ -12,7 +12,9 @@ mijn project voor het realisatie examen
 ## test accounts
 
 jan / password123 - dit is management account
+
 piet / password123 - magazijn medewerker
+
 marie / password123 - verzending
 
 ## over de database
